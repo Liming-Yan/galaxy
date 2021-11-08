@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.ming.galaxy.mapper.StarTypeMapper">
+
+    <select id="getAllStarType" resultType="com.ming.galaxy.entity.StarType">
+        SELECT * FROM star_type
+    </select>
+    <insert id="addStarType" parameterType="com.ming.galaxy.entity.StarType">
+        insert into star_type (type) values (
+        #{type}
+        )
+    </insert>
+    <delete id="deleteStarType" parameterType="com.ming.galaxy.entity.StarType">
+        delete from star_type
+        where id = #{id}
+    </delete>
+
+</mapper>
